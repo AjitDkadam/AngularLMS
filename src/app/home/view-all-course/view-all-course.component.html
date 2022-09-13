@@ -1,0 +1,28 @@
+<div class="container">
+<h1 style="background-color: #4fd1c2;">Learning Management System Course Details
+  <a  class="btn btn-sm btn-danger" routerLink="/home">Back To Home.</a>
+</h1>
+<table class="table table-bordered">
+    <thead>
+      <tr style="background-color: #4fd1c2;">
+        <th>Id</th>
+        <th>Course Name</th>
+        <th>Technology</th>
+        <th>Duration(In Month)</th>
+        <th>Description</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of course;">
+        <td>{{d.id}}</td>
+        <td>{{d.courseName}} </td>
+        <td>{{d.technology}} </td>
+        <td>{{d.courseDuration}} </td>
+        <td>{{d.courseDescription}} </td>
+        <td><button type="button" class="btn btn-danger btn-sm" (click)="delete(d.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

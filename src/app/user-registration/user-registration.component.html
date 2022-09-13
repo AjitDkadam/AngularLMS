@@ -1,0 +1,53 @@
+<!--<div class="wrapper-class">
+    <mat-card class="example-card">
+        <mat-card-title>New User Registration</mat-card-title>
+        <form class="example-form" >
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>User Name</mat-label>
+              <input matInput placeholder="Username" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Email" >
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Create Passowrd</mat-label>
+                <input matInput type="password" placeholder="Passowrd" >
+            </mat-form-field>
+            <button mat-raised-button color="primary">Save</button>
+            <a mat-button routerLink="/">Back to Login</a>    
+          </form>
+   </mat-card>
+    </div>-->
+<div class="container">
+    
+  <h1>{{title}}</h1>
+  
+    <form #userForm="ngForm" (ngSubmit)="getUserFormData(userForm.value)" >
+        <table style="width: 100%;">
+            <tr>
+                <td>User ID</td>
+                <td><input type="text" class="form-control" ngModel name="id" placeholder="Enter User ID"></td>
+            </tr>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" class="form-control" ngModel name="userName" placeholder="Enter Username"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" class="form-control" ngModel name="email" placeholder="Enter Email"></td>
+            </tr>
+            <tr>
+                <td>Create Passowrd</td>
+                <td><input type="password" class="form-control" ngModel name="password" placeholder="Enter Password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button class="btn btn-primary" style="margin-right: 10px;">Save</button>
+                    <a routerLink="/" class="btn btn-primary">Back to Login</a> 
+                </td>
+            </tr>
+        </table>
+    </form>
+  <hr/>
+</div>

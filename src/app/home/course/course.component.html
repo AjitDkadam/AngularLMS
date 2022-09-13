@@ -1,0 +1,29 @@
+
+<div class="container">
+    <h1 style="background-color: #71c7b6;">Learning Management System (Add New Course) 
+      <a  class="btn btn-sm btn-danger" routerLink="/home">Back To Home.</a>
+    </h1>
+<form  [formGroup]="courseForm" (ngSubmit)="getCourseFormData(courseForm.value)">
+    <div class="form-group">
+        <label for="courseName">Id</label>
+        <input type="text" class="form-control" id="id" ngModel formControlName="id">
+      </div>
+    <div class="form-group">
+      <label for="courseName">Course Name:</label>
+      <input type="text" class="form-control" id="courseName" ngModel formControlName="courseName">
+    </div>
+    <div class="form-group">
+      <label for="technology">Technology</label>
+      <input type="text" class="form-control" id="technology" ngModel formControlName="technology">
+    </div>
+    <div class="form-group">
+        <label for="technology">Duration(In Month)</label>
+        <input type="text" class="form-control" id="courseDuration" ngModel formControlName="courseDuration">
+    </div>
+    <div class="form-group">
+        <label for="technology">Description</label>
+        <input type="text" class="form-control" id="courseDescription" ngModel formControlName="courseDescription">
+    </div>
+    <button class="btn btn-primary" >Submit</button>
+  </form>
+  </div>

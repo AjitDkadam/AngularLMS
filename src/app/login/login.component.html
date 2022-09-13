@@ -1,0 +1,22 @@
+<div class="wrapper-class">
+<mat-card class="example-card">
+    <mat-card-title>Login</mat-card-title>
+    <form class="example-form" [formGroup]="loginForm">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>User Name</mat-label>
+          <input matInput type="email" placeholder="Username" formControlName="email">
+        </mat-form-field>
+        <span *ngIf="email.invalid && email.touched" class="errorMsg">Email is invalid</span>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" placeholder="Passowrd" minlength="8">
+        </mat-form-field>
+        <span class="errorMsg" *ngIf="password.invalid && loginForm.get('password').hasError('pattern') && password.errors?.['minlength']" >
+            Passowrd should be alphanumeric and minimum 8 characters.
+        </span>
+        <button type="button" mat-raised-button color="primary" (click)="checkLogin()">Login</button>
+        <a mat-button routerLink="/userRegistration">Create An Account.</a>    
+      </form>
+</mat-card>
+
+</div>

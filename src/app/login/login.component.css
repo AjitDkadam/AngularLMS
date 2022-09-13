@@ -1,0 +1,32 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+
+  .wrapper-class{
+    margin-left: 30%;
+    margin-top:10%;
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .input.ng-invalid{
+    border-bottom: 5 px solid red;
+  }
+
+  .input.ng-valid{
+    border-bottom: 5 px solid green;
+  }
+
+  .errorMsg{
+    color: red;
+    font-family: 'Lucida Sans Regular';
+    font-weight: bold;
+  }
+  
